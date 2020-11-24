@@ -1,0 +1,84 @@
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport content="width=device-width,initial-scale=1">
+  <title>Tomoki Kaneko</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Chewy&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+    <nav class="horizontal_nav">
+      <ul>
+        <li>
+          <a href="works.html">works</a>
+        </li>
+        <li>
+          <a href="#">resume</a>
+        </li>
+        <li>
+          <a href="#aboutme" class="js-smooth-scroll">about me</a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="vertical_nav">
+      <ul>
+        <li>
+          <a href="https://forms.gle/aBDj6rJD44vnzCyX9" target="_blank">contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="main_phrases">
+      <section class="phrase_en">
+        <p>Hello, I am Tomo.<br />
+          I create user interfaces to<br />
+          produce connections.</p>
+      </section>
+      <section class="phrase_ja">
+        <p>何かのきっかけ、つながりが生まれる<br />
+          価値あるユーザーインタフェース<br />
+          を作っています。</p>
+      </section>
+    </div>
+
+    <div id="aboutme">
+      <div class="wrap_bio">
+        <h2>Tomoki Kaneko</h2>
+        <p>WEB designer / developer / director</p>
+        <p class="bio">1994年生まれ</p>
+        <p class="bio">外語系の大学を卒業した後、IT関連スタートアップ企業に入社。<br />人材関連のライティングからキャリアをスタートしました。<br />
+          その後、周囲のエンジニアの姿を目にし、技術でアイデアを具現化していく事に魅力を感じたことからフロントエンド開発分野でのキャリアを志し、現在に至ります。</p>
+      </div>
+    </div>
+
+    <div class="sns_links">
+      <ul>
+        <li>
+            <a href="https://www.instagram.com/hi_im_tomonky/?hl=ja" target="_blank"><img src="img/instagram.png"/></a>
+        </li>
+        <li>
+            <a href="https://www.facebook.com/tomo.ka.161" target="_blank"><img src="img/facebook.png"/></a>
+        </li>
+        <li>
+            <a href="https://github.com/tom555-555" target="_blank"><img src="img/github.png"/></a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  <script>
+    document.addEventListener("click", e => {
+      const target = e.target;
+      // clickした要素がclass属性、js-smooth-scrollを含まない場合は処理を中断
+      if (!target.classList.contains("js-smooth-scroll")) return;
+      e.preventDefault();
+      const targetId = target.hash;
+      document.querySelector(targetId).scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    });
+      </script>
+</body>
+</html>
