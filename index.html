@@ -55,18 +55,20 @@
     <div class="sns_links">
       <ul>
         <li>
-            <a href="https://www.instagram.com/hi_im_tomonky/?hl=ja" target="_blank"><img src="img/instagram.png"/></a>
+            <a v-bind:href="instagram_url" target="_blank"><img src="img/instagram.png"/></a>
         </li>
         <li>
-            <a href="https://www.facebook.com/tomo.ka.161" target="_blank"><img src="img/facebook.png"/></a>
+            <a v-bind:href="facebook_url" target="_blank"><img src="img/facebook.png"/></a>
         </li>
         <li>
-            <a href="https://github.com/tom555-555" target="_blank"><img src="img/github.png"/></a>
+            <a v-bind:href="github_url" target="_blank"><img src="img/github.png"/></a>
         </li>
       </ul>
     </div>
 
   </div>
+  <script src="js/vue.min.js"></script>
+  <script src="js/main.js"></script>
   <script>
     document.addEventListener("click", e => {
       const target = e.target;
